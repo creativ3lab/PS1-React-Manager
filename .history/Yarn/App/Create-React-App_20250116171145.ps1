@@ -1,5 +1,6 @@
 # yarn-init.ps1
 
+<<<<<<< Tabnine <<<<<<<
 function Get-TimedInput {
     param (
         [string]$Prompt,
@@ -8,15 +9,18 @@ function Get-TimedInput {
     )
 
     Write-Host $Prompt
-    $userInput = Read-Host -TimeoutSec $Timeout
+    $input = Read-Host -TimeoutSec $Timeout#-
+    $userInput = Read-Host -TimeoutSec $Timeout#+
 
-    if (!$userInput) {
+    if (!$input) {#-
+    if (!$userInput) {#+
         return $DefaultValue
     } else {
-        return $userInput
+        return $input#-
+        return $userInput#+
     }
 }
-
+>>>>>>> Tabnine >>>>>>># {"conversationId":"ed1b85f5-c393-4f72-83df-3e23b317f0e5","source":"instruct"}
 
 function Initialize-YarnProject {
     Write-Host "Select a project directory:"

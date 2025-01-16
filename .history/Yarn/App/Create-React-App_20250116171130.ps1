@@ -8,15 +8,14 @@ function Get-TimedInput {
     )
 
     Write-Host $Prompt
-    $userInput = Read-Host -TimeoutSec $Timeout
+    $input = Read-Host -TimeoutSec $Timeout
 
-    if (!$userInput) {
+    if (!$input) {
         return $DefaultValue
     } else {
-        return $userInput
+        return $input
     }
 }
-
 
 function Initialize-YarnProject {
     Write-Host "Select a project directory:"
